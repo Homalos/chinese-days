@@ -1,7 +1,71 @@
 [project]
 name = "chinese-days"
 version = "0.1.0"
-description = "China holiday calendar database"
+description = "Python版本的中国节假日、调班日、工作日查询库"
 readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.13"
+authors = [
+    {name = "Lumosylva", email = "donnymoving@gmail.com"}
+]
+maintainers = [
+    {name = "Lumosylva", email = "donnymoving@gmail.com"}
+]
+keywords = ["chinese", "holidays", "workdays", "calendar", "节假日", "工作日"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Scheduling",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
 dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Homalos/chinese-days"
+Documentation = "https://github.com/Homalos/chinese-days/blob/main/README.md"
+Repository = "git@github.com:Homalos/chinese-days.git"
+"Issues" = "https://github.com/Homalos/chinese-days/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 88
+target-version = ['py310', 'py311', 'py312', 'py313']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=days_base --cov-report=term-missing"
+testpaths = [
+    "test_days.py",
+]
