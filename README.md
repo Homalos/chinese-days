@@ -9,7 +9,7 @@
 
 ## Overview
 
-chinese-days is a Python library for querying Chinese holidays and working days.
+chinese-days - A Python library specifically designed for querying Chinese public holidays, adjusted workdays, and compensatory rest days.
 
 ### Project Structure
 

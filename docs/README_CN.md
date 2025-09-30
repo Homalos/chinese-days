@@ -9,7 +9,7 @@
 
 ## 概述
 
-chinese-days 是一个基于 Python 的中国节假日、工作日查询库。
+chinese-days - 专门用于查询中国节假日、调休工作日、补休日的Python库
 
 ### 项目结构
 
