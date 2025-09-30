@@ -27,6 +27,7 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "hatch>=1.14.2",
+    "twine>=6.2.0",
 ]
 
 [project.optional-dependencies]
