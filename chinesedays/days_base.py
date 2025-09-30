@@ -35,12 +35,12 @@ class DaysBase:
     _instance = None
     _data_loaded = False
 
-    def __new__(cls):
+    def __new__(cls) -> 'DaysBase':
         if cls._instance is None:
             cls._instance = super().__new__(cls)
         return cls._instance
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         if not self._data_loaded:
             self._holidays: set[str] = set()
@@ -54,7 +54,11 @@ class DaysBase:
     def _load_data(self) -> None:
         try:
             possible_paths = [
+                # 开发环境路径
                 Path(__file__).parent.parent / "data" / "chinese-days.json",
+                # 打包后的路径
+                Path(__file__).parent / "data" / "chinese-days.json",
+                # 当前工作目录
                 Path("data/chinese-days.json")
             ]
 
