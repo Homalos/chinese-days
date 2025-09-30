@@ -1,10 +1,9 @@
 [project]
 name = "chinese-days"
-version = "0.1.0"
+version = "0.0.1"
 description = "Python版本的中国节假日、调班日、工作日查询库"
 readme = "README.md"
 license = {text = "MIT"}
-requires-python = ">=3.13"
 authors = [
     {name = "Lumosylva", email = "donnymoving@gmail.com"}
 ]
@@ -26,7 +25,9 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "hatch>=1.14.2",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -46,6 +47,16 @@ Repository = "git@github.com:Homalos/chinese-days.git"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "chinesedays/__version__.py"
+pattern = "__version__ = ['\"](?P<version>[^'\"]+)['\"]"
+
+[tool.hatch.build.targets.sdist]
+include = ["*"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["*"]
 
 [tool.black]
 line-length = 88
