@@ -53,10 +53,21 @@ path = "chinesedays/__version__.py"
 pattern = "__version__ = ['\"](?P<version>[^'\"]+)['\"]"
 
 [tool.hatch.build.targets.sdist]
-include = ["*"]
+include = [
+    "chinesedays/",
+    "data/",
+    "docs/",
+    "examples/",
+    "tests/",
+    "README.md",
+    "LICENSE",
+]
 
 [tool.hatch.build.targets.wheel]
-packages = ["*"]
+packages = ["chinesedays"]
+
+[tool.hatch.build.force-include]
+"data/chinese-days.json" = "chinesedays/data/chinese-days.json"
 
 [tool.black]
 line-length = 88
