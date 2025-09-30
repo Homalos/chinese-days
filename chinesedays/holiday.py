@@ -8,6 +8,7 @@
 @Email      : donnymoving@gmail.com
 @Software   : PyCharm
 @Description: 节假日对象类
+Holiday-related object classes
 """
 from datetime import datetime, date
 
@@ -20,9 +21,10 @@ class Holiday:
 
         Args:
             date_str: 日期字符串，格式为 'YYYY-MM-DD'
-            chinese_name: 中文名称
-            english_name: 英文名称
-            holiday_type: 节假日类型
+            Date string, formatted as 'YYYY-MM-DD'
+            chinese_name: 中文名称 Chinese name
+            english_name: 英文名称 English name
+            holiday_type: 节假日类型 Holiday types
         """
         self.date_str = date_str
         self.chinese_name = chinese_name

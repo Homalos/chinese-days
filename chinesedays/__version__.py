@@ -8,5 +8,6 @@
 @Email      : donnymoving@gmail.com
 @Software   : PyCharm
 @Description: 项目版本号
+Project version number
 """
 __version__ = "0.0.1"

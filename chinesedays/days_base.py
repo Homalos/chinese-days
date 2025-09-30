@@ -11,6 +11,11 @@
 
 更多详细用法参考：examples/usage_examples.py
 完整测试用例参考：tests/test_days.py
+
+Chinese Public Holidays and Working Days Database
+
+For more detailed usage examples, please refer to: examples/usage_examples.py
+For complete test cases, please refer to: tests/test_days.py
 """
 import json
 import logging
@@ -60,7 +65,7 @@ class DaysBase:
                     break
 
             if not data_file:
-                raise FileNotFoundError("无法找到数据文件 chinese-days.json")
+                raise FileNotFoundError("Unable to find the data file chinese-days.json")
 
             with open(data_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -79,7 +84,7 @@ class DaysBase:
             self._workday_details = workdays
 
         except Exception as e:
-            logger.error(f"加载数据文件时出错: {e}")
+            logger.error(f"An error occurred while loading the data file: {e}")
             raise
 
     def get_holiday_details(self) -> dict[str, str]:
@@ -328,7 +333,7 @@ class DaysBase:
         elif isinstance(date_input, datetime):
             return date_input
         else:
-            raise TypeError(f"不支持的日期类型：{type(date_input)}")
+            raise TypeError(f"Unsupported date type: {type(date_input)}")
 
     @staticmethod
     def _normalize_date(date_input: Union[datetime, date, str, int]) -> str:
@@ -347,7 +352,8 @@ class DaysBase:
                 date_str_list = date_input.split('-')
                 for dt_str in date_str_list:
                     if not bool(re.match(r'^\d+$', dt_str)):
-                        raise ValueError(f"日期格式错误，请使用 'YYYY-MM-DD'、'YYYYMMDD' 或 YYYYMMDD 格式：{date_input}")
+                        raise ValueError(f"Invalid date format. Please use 'YYYY-MM-DD', 'YYYYMMDD', "
+                                         f"or YYYYMMDD format: {date_input}")
 
                 # 如果月是一位数，前面补0
                 if 1 == len(date_str_list[1]):
@@ -365,14 +371,16 @@ class DaysBase:
 
             if '-' not in date_input and len(date_input) == 8:
                 if not bool(re.match(r'^\d+$', date_input)):
-                    raise ValueError(f"日期格式错误，请使用 'YYYY-MM-DD'、'YYYYMMDD' 或 YYYYMMDD 格式：{date_input}")
+                    raise ValueError(f"Invalid date format. Please use 'YYYY-MM-DD', 'YYYYMMDD', "
+                                     f"or YYYYMMDD format: {date_input}")
                 date_input = date_input[:4] + "-" + date_input[4:6] + "-" + date_input[6:]
 
             try:
                 datetime.strptime(date_input, '%Y-%m-%d')
                 return date_input
             except ValueError:
-                raise ValueError(f"日期格式错误，请使用 'YYYY-MM-DD'、'YYYYMMDD' 或 YYYYMMDD 格式：{date_input}")
+                raise ValueError(f"Invalid date format. Please use 'YYYY-MM-DD', 'YYYYMMDD', "
+                                 f"or YYYYMMDD format: {date_input}")
 
         if isinstance(date_input, int):
             if len(str(date_input)) == 8:
@@ -383,7 +391,8 @@ class DaysBase:
                 datetime.strptime(date_input, '%Y-%m-%d')
                 return date_input
             except ValueError:
-                raise ValueError(f"日期格式错误，请使用 'YYYY-MM-DD'、'YYYYMMDD' 或 YYYYMMDD 格式：{date_input}")
+                raise ValueError(f"Invalid date format. Please use 'YYYY-MM-DD', 'YYYYMMDD', "
+                                 f"or YYYYMMDD format: {date_input}")
 
         elif isinstance(date_input, (datetime, date)):
             return date_input.strftime('%Y-%m-%d')

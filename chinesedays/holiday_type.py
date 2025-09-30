@@ -8,11 +8,18 @@
 @Email      : donnymoving@gmail.com
 @Software   : PyCharm
 @Description: 节假日类型枚举
+Holiday type enumeration
 """
 from enum import Enum
 
 
 class HolidayType(Enum):
-    LEGAL = "legal"     # 法定节假日
-    WORK = "work"       # 工作日(含调休工作日，将原休息日置换为工作日)
-    IN_LIEU = "in_lieu" # 补休日
+    # 法定节假日
+    # Public holidays
+    LEGAL = "legal"
+    # 作日(含调休工作日，将原休息日置换为工作日)
+    # Workdays (including adjusted workdays, where a regular day off is replaced with a workday)
+    WORK = "work"
+    # 补休日
+    # Compensatory day off
+    IN_LIEU = "in_lieu"
