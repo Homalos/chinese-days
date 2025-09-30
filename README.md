@@ -17,6 +17,7 @@ chinese-days is a Python library for querying Chinese holidays and working days.
 chinese-days/
 ├── chinesedays/
 │   ├── __init__.py
+│   ├── __version__.py		# Project version number
 │   ├── calendar.py			# Calendar utility
 │   ├── date_utils.py		# Utility functions for querying Chinese holidays and working days
 │   ├── days_base.py		# Class for querying Chinese holidays and working days
@@ -24,7 +25,8 @@ chinese-days/
 │   └── holiday_type.py		# Holiday type enumeration
 ├── data/
 │   └── chinese-days.json	# Chinese holiday and working day data
-├── docs/					# Documentation
+├── docs/
+│   └── README_CN.md		# Chinese instruction manual
 ├── examples/
 │   ├── __init__.py
 │   └── usage_examples.py	# Usage examples
@@ -35,7 +37,8 @@ chinese-days/
 ├── .python-version
 ├── LICENSE
 ├── pyproject.toml
-└── README.md
+├── README.md
+└── uv.lock
 ```
 
 ## Features
