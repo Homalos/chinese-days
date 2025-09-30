@@ -17,6 +17,7 @@ chinese-days 是一个基于 Python 的中国节假日、工作日查询库。
 chinese-days/
 ├── chinesedays/
 │   ├── __init__.py
+│   ├── __version__.py		# 项目版本号
 │   ├── calendar.py			# 日历工具
 │   ├── date_utils.py		# 中国节假日、工作日查询工具便捷函数
 │   ├── days_base.py		# 中国节假日、工作日查询类
@@ -24,7 +25,8 @@ chinese-days/
 │   └── holiday_type.py		# 节假日对象类
 ├── data/
 │   └── chinese-days.json	# 中国节假日、工作日数据
-├── docs/					# 相关文档
+├── docs/
+│   └── README_CN.md		# 中文说明文档
 ├── examples/
 │   ├── __init__.py
 │   └── usage_examples.py	# 功能演示
@@ -35,7 +37,8 @@ chinese-days/
 ├── .python-version
 ├── LICENSE
 ├── pyproject.toml
-└── README.md
+├── README.md
+└── uv.lock
 ```
 
 ## 功能特性
