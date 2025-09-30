@@ -42,7 +42,7 @@ dev = [
 [project.urls]
 Homepage = "https://github.com/Homalos/chinese-days"
 Documentation = "https://github.com/Homalos/chinese-days/blob/main/README.md"
-Repository = "git@github.com:Homalos/chinese-days.git"
+Repository = "https://github.com/Homalos/chinese-days"
 "Issues" = "https://github.com/Homalos/chinese-days/issues"
 
 [build-system]
