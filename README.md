@@ -1,6 +1,6 @@
 # Chinese Holiday and Working Day Lookup Library
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 
 <p align="center">
   English |
