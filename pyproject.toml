@@ -1,0 +1,7 @@
+[project]
+name = "chinese-days"
+version = "0.1.0"
+description = "China holiday calendar database"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
