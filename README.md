@@ -160,7 +160,7 @@ print(f"\nNumber of New Year's Day holidays across all years: {len(new_year_days
 
 ## Data Coverage
 
-- **Time Period**: 2004 - 2025
+- **Time Period**: 2004 - 2026
 - **Holiday Types**: New Year's Day, Spring Festival, Tomb-Sweeping Festival, Labor Day, Dragon Boat Festival, Mid-Autumn Festival, National Day
 - **Adjusted Workdays and Compensatory Days**: Includes complete information on adjusted workdays and compensatory days
 - **Data Source**: Based on the [vsme/chinese-days](https://github.com/vsme/chinese-days) project
