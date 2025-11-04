@@ -10,4 +10,4 @@
 @Description: 项目版本号
 Project version number
 """
-__version__ = "0.0.1"
+__version__ = "0.0.2"

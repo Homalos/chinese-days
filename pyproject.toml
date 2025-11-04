@@ -1,7 +1,7 @@
 [project]
 name = "chinese-days"
-version = "0.0.1"
-description = "Python版本的中国节假日、调班日、工作日查询库"
+version = "0.0.2"
+description = "Python version of a Chinese holiday, shift change day, and workday lookup library"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
@@ -10,7 +10,7 @@ authors = [
 maintainers = [
     {name = "Lumosylva", email = "donnymoving@gmail.com"}
 ]
-keywords = ["chinese", "holidays", "workdays", "calendar", "节假日", "工作日"]
+keywords = ["chinese", "holidays", "workdays", "calendar", "holiday"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
